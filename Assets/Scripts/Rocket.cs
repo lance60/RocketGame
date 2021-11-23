@@ -37,12 +37,14 @@ public class Rocket : MonoBehaviour
     private float thrustIn;
     private float rotateIn;
     private bool alive;
+    private bool unkillable;
 
     private void Start()
     {
         thrustIn = 0f;
         rotateIn = 0f;
         alive = true;
+        unkillable = false;
 
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
@@ -73,6 +75,7 @@ public class Rocket : MonoBehaviour
                     break;
                 case "Finish":
                     FreezePlayer();
+                    unkillable = true;
                     break;
                 default:
                     KillPlayer();
@@ -176,11 +179,14 @@ public class Rocket : MonoBehaviour
 
     private void KillPlayer()
     {
-        alive = false;
-
-        if(audioSource.isPlaying)
+        if (!unkillable)
         {
-            audioSource.Stop();
+            alive = false;
+
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
     }
 

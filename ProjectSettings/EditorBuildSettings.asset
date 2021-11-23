@@ -30,8 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TheyBothMove.unity
     guid: 0e6021b1da017ad4ea3cf8a519915b86
   - enabled: 1
-    path: Assets/Scenes/Silo.unity
-    guid: 3306336139e84934cb50ff34ab8eef39
+    path: Assets/Scenes/GottaMove.unity
+    guid: 94aafbaa8e734614995790ac0449deff
   - enabled: 1
     path: Assets/Scenes/Mastery.unity
     guid: e237226e6a5f572418a7c7bd698a929b
